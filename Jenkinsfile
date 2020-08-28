@@ -13,5 +13,10 @@ pipeline{
                 }
             }
         }
+        stage('Check HTML is there'){
+            steps{
+                sh 'curl -L http://pipeline-to-aws-s3.s3-website-us-west-2.amazonaws.com/'
+            }
+        }
     }
 }
